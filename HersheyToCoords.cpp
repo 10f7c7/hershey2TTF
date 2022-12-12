@@ -53,12 +53,27 @@ void display(int** a, int r, int c, bool HmPts){
     }
 }
 
+bool writeCoordsToFile(int** arr)  {
+
+    int ptAmt = sizeof(arr) / sizeof(int);
+    ofstream CoordH("newstroke_coords.h");
+    CoordH << "const int** newstroke_coords[] = {" << endl;
+
+    for (int i = 0; i<ptAmt; i++)  {
+        CoordH << arr[i] << ',' << endl;
+    }
+
+    CoordH << "};";
+    CoordH.close();
+}
+
 
 int main()  {
     // const string txt = "JZNFNJ RVFVJ";
     const string txt = "I[VZT[P[NZMXMPNNPMTMVNWPWRMT";
     const int left = getCoordPoint(txt[0]);
     const int right = getCoordPoint(txt[1]);
+    const bool HumanCoord = true;
     // cout << left << endl;
 
     // const int pairCount = getLength(txt)/2;
@@ -95,7 +110,13 @@ int main()  {
 
     }
 
-    display(coordPairs, row, col, false);
+    display(coordPairs, row, col, HumanCoord);
+
+    if (!HumanCoord)  {
+        writeCoordsToFile(coordPairs);
+    }
+
+
 
 
 }
