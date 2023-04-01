@@ -3,7 +3,8 @@
 
 using namespace std;
 
-int pointsLeft = newstroke_font_bufsize;
+// const pointsLeft = newstroke_font_bufsize;
+const int pointsLeft = 100;
 
 
 int getCoordPoint(char in)  {
@@ -90,14 +91,14 @@ void display(int** a, int r, int c, bool HmPts){
 
 bool addCoordsToFile(ofstream& CoordH, int** arr, int pt)  {
     if (pt == 0)  {
-        CoordH << "const int newstroke_coords[" << newstroke_font_bufsize << "][300][2] = {" << endl;
+        CoordH << "const int newstroke_coords[" << pointsLeft << "][300][2] = {" << endl;
     }
     CoordH << '{';
     for (int i = 0; i < 300; i++)  {
         CoordH << "{" << int(arr[i][0]) << ", " << int(arr[i][1]) << "},";
     }
     CoordH << "}," << endl;
-    if (pt == newstroke_font_bufsize-1)  {
+    if (pt == pointsLeft-1)  {
         CoordH << "};" << endl << endl << "const int newstroke_coords_bufsize = sizeof(newstroke_coords)/sizeof(newstroke_coords[0]);";
         return true;
     }
@@ -119,6 +120,9 @@ int **doTheThing(string txt) {
     for(int i=0; i<row; i++){
         coordPairs[i] = new int[col];
     }
+    coordPairs[pairNum][0] = getCoordPoint(txt[0]);// + right;
+    coordPairs[pairNum++][1] = getCoordPoint(txt[1]);// + right;
+
     for (int i = 2; i < 300; i+=2)  {
         if (i >= txt.length())  {
             coordPairs[pairNum][0] = 0;
@@ -131,12 +135,12 @@ int **doTheThing(string txt) {
                 continue;
             }
             // if (i == 0)  {
-            //     coordPairs[pairNum][0] = getCoordPoint(txt[i]) + right;
-            //     coordPairs[pairNum++][1] = getCoordPoint(txt[i+1]) + right;
+            //     coordPairs[pairNum][0] = getCoordPoint(txt[i]);// + right;
+            //     coordPairs[pairNum++][1] = getCoordPoint(txt[i+1]);// + right;
             //     continue;
             // }
             coordPairs[pairNum][0] = getCoordPoint(txt[i]) + right;
-            coordPairs[pairNum++][1] = -(getCoordPoint(txt[i+1])) + 9 + 7;
+            coordPairs[pairNum++][1] = ((getCoordPoint(txt[i+1])) + 12 + 7);
         }
     }
     return coordPairs;
@@ -147,7 +151,7 @@ int **doTheThing(string txt) {
 int main()  {
     ofstream CoordH("newstroke_coords.h");
 
-    for (int i = 0; i < newstroke_font_bufsize; i++)  {
+    for (int i = 0; i < pointsLeft; i++)  {
 
         bool prcs = addCoordsToFile(CoordH, doTheThing(newstroke_font[i]), i);
         if (prcs)  {

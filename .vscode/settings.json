@@ -6,6 +6,12 @@
         "xlocale": "cpp",
         "xutility": "cpp",
         "iostream": "cpp",
-        "ostream": "cpp"
-    }
+        "ostream": "cpp",
+        "chrono": "cpp",
+        "format": "cpp",
+        "regex": "cpp",
+        "iosfwd": "cpp"
+    },
+    "python.analysis.typeCheckingMode": "basic",
+    "svg.preview.background": "transparent"
 }
