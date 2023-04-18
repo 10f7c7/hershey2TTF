@@ -2,4 +2,9 @@
 newstroke_coords.h
 *.svg
 svg/node_modules
+<<<<<<< HEAD
 *.ttf
+=======
+*.ttf
+*.out
+>>>>>>> c0ce521 (Working HER2TTF!)
