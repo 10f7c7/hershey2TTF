@@ -9,7 +9,7 @@ Welcome to my Hershey to TTF conversion project. After many minutes searching, I
 
 To install just run
 
-    git clone https://github.com/10f7c7/hershey2svg
+    git clone https://github.com/10f7c7/hershey2ttf
 
 and install both `fontforge` and `inkscape`.
 
