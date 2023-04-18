@@ -40,7 +40,7 @@ and now you should have a ttf file in the main dir!
 
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/10f7c7/hershey2TTF/blob/master/LICENCE) file for details
 
 ## Contributing
 please (if you face any issues email me at 10f7c7@gmail.com)
