@@ -37,3 +37,10 @@ Now you will have all the fixed svgs in the `svg/_output` folder in a format tha
     fontforge -script SVGToTTF.py
 
 and now you should have a ttf file in the main dir!
+
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Contributing
+please (if you face any issues email me at 10f7c7@gmail.com)
