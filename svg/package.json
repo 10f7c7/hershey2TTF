@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "oslllo-svg-fixer": "^2.2.0"
-  },
-  "scripts": {
-    "oslllo-svg-fixer": "node node_modules/oslllo-svg-fixer/src/cli.js"
-  }
-}
