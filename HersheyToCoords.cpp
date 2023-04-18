@@ -3,8 +3,8 @@
 
 using namespace std;
 
-// const pointsLeft = newstroke_font_bufsize;
-const int pointsLeft = 100;
+const int pointsLeft = newstroke_font_bufsize;
+// const int pointsLeft = 100;
 
 
 int getCoordPoint(char in)  {

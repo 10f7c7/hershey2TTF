@@ -2,3 +2,4 @@
 newstroke_coords.h
 *.svg
 svg/node_modules
+*.ttf
