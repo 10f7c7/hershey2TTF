@@ -17,4 +17,7 @@ for file in files:
 fontforge.activeFont().selection.all()
 font.autoWidth(150,minBearing=10, maxBearing=300)
 
+fontforge.activeFont().selection.select(" ")
+font.autoWidth(400,minBearing=400, maxBearing=400)
+
 font.generate('NewStroke.ttf')
