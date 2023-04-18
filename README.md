@@ -30,7 +30,7 @@ Then to fix the svgs, enter the `svg` folder and run
 
     bash stroke2path.sh
 
-Now you will have all the fixed svgs in the `svg/_output` folder in a format that fontforge can read. To generate the ttf, go bach to the main dir and run
+Now you will have all the fixed svgs in the `svg/_output` folder in a format that fontforge can read. To generate the ttf, go back to the main dir and run
 
     fontforge -script SVGToTTF.py
 
