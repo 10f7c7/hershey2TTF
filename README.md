@@ -14,7 +14,9 @@ To install just run
 and install both `fontforge` and `inkscape`.
 
 ## Usage
-First you need to download a Hershey font and put it into a header file by default named `newstroke_font.h` and in an array named `const char* const newstroke_font[]`. The array must store the hershey encoding in unicode order starting at `0x20`. Along with that, you need a bufsize var that contains the length of the array in the header file called `const int newstroke_font_bufsize`.
+First you need to download a Hershey font and put it into a header file by default named `newstroke_font.h` and in an array named `const char* const newstroke_font[]`. The array must store the hershey encoding in unicode order starting at `0x20`. Along with that, you need a bufsize var that contains the length of the array in the header file called `const int newstroke_font_bufsize`. Before you compile, you might want to adjust some offsets hidden it the code and some other things to make sure that if properly formats. The font that I used and based my offsets off of is [
+NewStroke font [Vovanium]
+](https://vovanium.ru/sledy/newstroke/en).
 
 Then to generate the svg coords run
 
